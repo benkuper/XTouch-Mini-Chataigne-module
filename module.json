@@ -1,0 +1,325 @@
+{
+	"name": "X-Touch MINI",
+	"type": "MIDI",
+	"path": "Hardware",
+	"version": "1.0.0",
+	"description": "Special MIDI Module for the Behringer X-Touch MINI",
+	"url": "https://github.com/benkuper/XTouch-Mini-Chataigne-module",
+	"downloadURL": "https://github.com/benkuper/XTouch-Mini-Chataigne-module/archive/main.zip",
+	"hasInput": true,
+	"hasOutput": true,
+	"hideDefaultCommands": true,
+	"parameters": {
+		"Encoder Sensitivity": {
+			"type": "Float",
+			"default": 0.5,
+			"min": 0,
+			"max": 1
+		},
+		"Button Modes": {
+			"type": "Container",
+			"Button 1 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 2 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 3 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 4 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 5 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 6 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 7 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 8 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 9 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 10 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 11 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 12 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 13 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 14 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 15 Toggle Mode": {
+				"type": "Boolean"
+			},
+			"Button 16 Toggle Mode": {
+				"type": "Boolean"
+			}
+		},
+		"Encoder Modes": {
+			"type": "Container",
+			"Encoder 1 Mode": {
+				"type": "Enum",
+				"options": {
+					"Single": 1,
+					"Trim": 17,
+					"Fan": 33,
+					"Spread": 49
+				}
+			},
+			"Encoder 2 Mode": {
+				"type": "Enum",
+				"options": {
+					"Single": 1,
+					"Trim": 17,
+					"Fan": 33,
+					"Spread": 49
+				}
+			},
+			"Encoder 3 Mode": {
+				"type": "Enum",
+				"options": {
+					"Single": 1,
+					"Trim": 17,
+					"Fan": 33,
+					"Spread": 49
+				}
+			},
+			"Encoder 4 Mode": {
+				"type": "Enum",
+				"options": {
+					"Single": 1,
+					"Trim": 17,
+					"Fan": 33,
+					"Spread": 49
+				}
+			},
+			"Encoder 5 Mode": {
+				"type": "Enum",
+				"options": {
+					"Single": 1,
+					"Trim": 17,
+					"Fan": 33,
+					"Spread": 49
+				}
+			},
+			"Encoder 6 Mode": {
+				"type": "Enum",
+				"options": {
+					"Single": 1,
+					"Trim": 17,
+					"Fan": 33,
+					"Spread": 49
+				}
+			},
+			"Encoder 7 Mode": {
+				"type": "Enum",
+				"options": {
+					"Single": 1,
+					"Trim": 17,
+					"Fan": 33,
+					"Spread": 49
+				}
+			},
+			"Encoder 8 Mode": {
+				"type": "Enum",
+				"options": {
+					"Single": 1,
+					"Trim": 17,
+					"Fan": 33,
+					"Spread": 49
+				}
+			}
+		}
+	},
+	"defaults": {
+		"devices": [
+			"X-Touch MINI",
+			"X-Touch MINI"
+		],
+		"autoAdd": false
+	},
+	"hideDefaultParameters": [
+		"autoAdd",
+		"autoFeedback"
+	],
+	"scripts": [
+		"XTouchMini.js"
+	],
+	"values": {
+		"Main Fader": {
+			"type": "Float",
+			"min": 0,
+			"max": 1
+		},
+		"Buttons": {
+			"type": "Container",
+			"Button 1": {
+				"type": "Boolean"
+			},
+			"Button 2": {
+				"type": "Boolean"
+			},
+			"Button 3": {
+				"type": "Boolean"
+			},
+			"Button 4": {
+				"type": "Boolean"
+			},
+			"Button 5": {
+				"type": "Boolean"
+			},
+			"Button 6": {
+				"type": "Boolean"
+			},
+			"Button 7": {
+				"type": "Boolean"
+			},
+			"Button 8": {
+				"type": "Boolean"
+			},
+			"Button 9": {
+				"type": "Boolean"
+			},
+			"Button 10": {
+				"type": "Boolean"
+			},
+			"Button 11": {
+				"type": "Boolean"
+			},
+			"Button 12": {
+				"type": "Boolean"
+			},
+			"Button 13": {
+				"type": "Boolean"
+			},
+			"Button 14": {
+				"type": "Boolean"
+			},
+			"Button 15": {
+				"type": "Boolean"
+			},
+			"Button 16": {
+				"type": "Boolean"
+			}
+		},
+		"Encoders": {
+			"type": "Container",
+			"Encoder 1": {
+				"type": "Float",
+				"default": 0,
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 1 Pressed": {
+				"type": "Boolean"
+			},
+			"Encoder 2": {
+				"type": "Float",
+				"default": 0,
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 2 Pressed": {
+				"type": "Boolean"
+			},
+			"Encoder 3": {
+				"type": "Float",
+				"default": 0,
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 3 Pressed": {
+				"type": "Boolean"
+			},
+			"Encoder 4": {
+				"type": "Float",
+				"default": 0,
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 4 Pressed": {
+				"type": "Boolean"
+			},
+			"Encoder 5": {
+				"type": "Float",
+				"default": 0,
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 5 Pressed": {
+				"type": "Boolean"
+			},
+			"Encoder 6": {
+				"type": "Float",
+				"default": 0,
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 6 Pressed": {
+				"type": "Boolean"
+			},
+			"Encoder 7": {
+				"type": "Float",
+				"default": 0,
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 7 Pressed": {
+				"type": "Boolean"
+			},
+			"Encoder 8": {
+				"type": "Float",
+				"default": 0,
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 8 Pressed": {
+				"type": "Boolean"
+			}
+		}
+	},
+	"commands": {
+		"Set Button Toggle State": {
+			"callback": "setButtonToggleState",
+			"parameters": {
+				"ID": {
+					"type": "Integer",
+					"default": 1,
+					"min": 1,
+					"max": 16
+				},
+				"Value": {
+					"type": "Boolean"
+				}
+			}
+		},
+		"Set Encoder Value": {
+			"callback": "setEncoderValue",
+			"parameters": {
+				"ID": {
+					"type": "Integer",
+					"default": 1,
+					"min": 1,
+					"max": 8
+				},
+				"Value": {
+					"type": "Float",
+					"min": 0,
+					"max": 1
+				}
+			}
+		}
+	}
+}
