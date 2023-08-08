@@ -14,7 +14,7 @@ var encoderContainer;
 var encoderValueParams = [];
 var encoderPressedParams = [];
 
-var buttonPitches = [89, 90, 40, 41, 42, 43, 44, 45, 87, 88, 91, 92, 93, 94, 95];
+var buttonPitches = [89, 90, 40, 41, 42, 43, 44, 45, 87, 88, 91, 92, 86, 93, 94, 95];
 
 function init() {
     buttonModeContainer = local.parameters.getChild("Button Modes");
