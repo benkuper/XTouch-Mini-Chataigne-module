@@ -222,6 +222,10 @@
 				"min": 0,
 				"max": 1
 			},
+			"Encoder 1 Absolute": {
+				"type": "Float",
+				"default": 0
+			},
 			"Encoder 1 Pressed": {
 				"type": "Boolean"
 			},
@@ -230,6 +234,10 @@
 				"default": 0,
 				"min": 0,
 				"max": 1
+			},
+			"Encoder 2 Absolute": {
+				"type": "Float",
+				"default": 0
 			},
 			"Encoder 2 Pressed": {
 				"type": "Boolean"
@@ -240,6 +248,10 @@
 				"min": 0,
 				"max": 1
 			},
+			"Encoder 3 Absolute": {
+				"type": "Float",
+				"default": 0
+			},
 			"Encoder 3 Pressed": {
 				"type": "Boolean"
 			},
@@ -248,6 +260,10 @@
 				"default": 0,
 				"min": 0,
 				"max": 1
+			},
+			"Encoder 4 Absolute": {
+				"type": "Float",
+				"default": 0
 			},
 			"Encoder 4 Pressed": {
 				"type": "Boolean"
@@ -258,6 +274,10 @@
 				"min": 0,
 				"max": 1
 			},
+			"Encoder 5 Absolute": {
+				"type": "Float",
+				"default": 0
+			},
 			"Encoder 5 Pressed": {
 				"type": "Boolean"
 			},
@@ -266,6 +286,10 @@
 				"default": 0,
 				"min": 0,
 				"max": 1
+			},
+			"Encoder 6 Absolute": {
+				"type": "Float",
+				"default": 0
 			},
 			"Encoder 6 Pressed": {
 				"type": "Boolean"
@@ -276,6 +300,10 @@
 				"min": 0,
 				"max": 1
 			},
+			"Encoder 7 Absolute": {
+				"type": "Float",
+				"default": 0
+			},
 			"Encoder 7 Pressed": {
 				"type": "Boolean"
 			},
@@ -284,6 +312,10 @@
 				"default": 0,
 				"min": 0,
 				"max": 1
+			},
+			"Encoder 8 Absolute": {
+				"type": "Float",
+				"default": 0
 			},
 			"Encoder 8 Pressed": {
 				"type": "Boolean"

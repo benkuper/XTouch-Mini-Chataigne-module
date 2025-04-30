@@ -12,6 +12,7 @@ var encoderModeParams = [];
 
 var encoderContainer;
 var encoderValueParams = [];
+var encoderAbsoluteValueParams = [];
 var encoderPressedParams = [];
 
 var buttonPitches = [89, 90, 40, 41, 42, 43, 44, 45, 87, 88, 91, 92, 86, 93, 94, 95];
@@ -31,6 +32,7 @@ function init() {
     for (var i = 0; i < 8; i++) {
         encoderModeParams[i] = encoderModeContainer.getChild("encoder" + (i + 1) + "Mode");
         encoderValueParams[i] = encoderContainer.getChild("encoder" + (i + 1) + "");
+        encoderAbsoluteValueParams[i] = encoderContainer.getChild("encoder" + (i + 1) + "Absolute");
         encoderPressedParams[i] = encoderContainer.getChild("encoder" + (i + 1) + "Pressed");
     }
 
@@ -100,13 +102,18 @@ function ccEvent(channel, number, value) {
     var enc = getEncoderForCC(number);
     if (enc == null) return;
 
+
     var incVal = value < 30 ? value : 64 - value;
+
+    var id = encoderValueParams.indexOf(enc) + 1;
 
     var sensitivity = local.parameters.encoderSensitivity.get() * .02;
     var val = enc.get() + incVal * sensitivity;
-
-    var id = encoderValueParams.indexOf(enc) + 1;
     setEncoderValue(id, val);
+
+    var absEnc = getAbsoluteEncoderForCC(number);
+    var absVal = absEnc.get() + incVal * sensitivity;
+    setAbsoluteEncoderValue(id, absVal);
 }
 
 function pitchWheelEvent(channel, value) {
@@ -155,6 +162,14 @@ function setEncoderValue(id, value) {
     updatingFromScript.remove(enc);
 }
 
+function setAbsoluteEncoderValue(id, value) {
+    var enc = encoderAbsoluteValueParams[id - 1];
+    if (enc == null) return;
+    if (!updatingFromScript.contains(enc)) updatingFromScript.push(enc);
+    enc.set(value);
+    updatingFromScript.remove(enc);
+}
+
 //Helpers
 function getButtonForPitch(pitch) {
     if (buttonPitches.contains(pitch)) return buttonPressedParams[buttonPitches.indexOf(pitch)];
@@ -170,6 +185,12 @@ function getEncoderForCC(number) {
     if (number >= 16 && number < 24) return encoderValueParams[number - 16];
     return null;
 }
+
+function getAbsoluteEncoderForCC(number) {
+    if (number >= 16 && number < 24) return encoderAbsoluteValueParams[number - 16];
+    return null;
+}
+
 
 function getEncoderPressedForPitch(pitch) {
     if (pitch >= 32 && pitch < 40) return encoderPressedParams[pitch - 32];
